@@ -16,6 +16,8 @@ libraryDependencies ++= Seq(
   "org.slf4j" % "slf4j-nop" % "1.6.4"
 )    
 
+coverageEnabled := true
+
 jacoco.settings
 
 play.Project.playScalaSettings
