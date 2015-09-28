@@ -1,0 +1,10 @@
+.settings
+.target
+.worksheet
+bin
+logs
+project/project
+project/target
+target
+.classpath
+.project
