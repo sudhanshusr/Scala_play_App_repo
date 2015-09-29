@@ -15,17 +15,16 @@ resolvers += Resolver.url("scoverage-bintray", url("https://dl.bintray.com/sksam
 // Use the Play sbt plugin for Play projects
 addSbtPlugin("com.typesafe.play" % "sbt-plugin" % "2.2.6")
 
-addSbtPlugin("de.johoop" % "cpd4sbt" % "1.1.5")
-
 //For code coverage
 addSbtPlugin("de.johoop" % "jacoco4sbt" % "2.1.1")
 
+//for scoverage
 //addSbtPlugin("org.scoverage" % "sbt-scoverage" % "1.1.0")
-
 addSbtPlugin("org.scoverage" % "sbt-scoverage" % "1.3.3")
+
 
 //for scala style
 addSbtPlugin("org.scalastyle" %% "scalastyle-sbt-plugin" % "0.7.0")
-
-
+//For CPD
+addSbtPlugin("de.johoop" % "cpd4sbt" % "1.1.5")
 

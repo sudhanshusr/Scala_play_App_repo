@@ -58,7 +58,7 @@ object DBUtils {
     val manager = TableQuery[Managers]
 
 
-    Database.forURL("jdbc:mysql://172.27.59.148:3306/play", "root", "admin", driver = "com.mysql.jdbc.Driver") withSession {
+    Database.forURL("jdbc:mysql://localhost:3306/play", "root", "root", driver = "com.mysql.jdbc.Driver") withSession {
       implicit session =>
         (department.ddl).create
         (employee.ddl).create
@@ -68,7 +68,7 @@ object DBUtils {
 
   def getAllDepartments: List[models.DepartmentModel] = {
 
-    Database.forURL("jdbc:mysql://172.27.59.148:3306/play", "root", "admin", driver = "com.mysql.jdbc.Driver") withSession {
+    Database.forURL("jdbc:mysql://localhost:3306/play", "root", "root", driver = "com.mysql.jdbc.Driver") withSession {
       implicit session =>
 
         //       val departments = TableQuery[Departments]
@@ -87,7 +87,7 @@ object DBUtils {
   def getAllEmployees: List[models.EmployeeModel] = {
 
 
-    Database.forURL("jdbc:mysql://172.27.59.148:3306/play", "root", "admin", driver = "com.mysql.jdbc.Driver") withSession {
+    Database.forURL("jdbc:mysql://localhost:3306/play", "root", "root", driver = "com.mysql.jdbc.Driver") withSession {
       implicit session =>
         val employees = TableQuery[Employees]
 
@@ -115,7 +115,7 @@ object DBUtils {
   def getAllManagers: List[models.EmployeeModel] = {
 
 
-    Database.forURL("jdbc:mysql://172.27.59.148:3306/play", "root", "admin", driver = "com.mysql.jdbc.Driver") withSession {
+    Database.forURL("jdbc:mysql://localhost:3306/play", "root", "root", driver = "com.mysql.jdbc.Driver") withSession {
       implicit session =>
         val managers = TableQuery[Managers]
         val employees = TableQuery[Employees]
@@ -132,7 +132,7 @@ object DBUtils {
   def getAllReportee(managerId: String): List[models.EmployeeModel] = {
 
 
-    Database.forURL("jdbc:mysql://172.27.59.148:3306/play", "root", "admin", driver = "com.mysql.jdbc.Driver") withSession {
+    Database.forURL("jdbc:mysql://localhost:3306/play", "root", "root", driver = "com.mysql.jdbc.Driver") withSession {
       implicit session =>
 
         //val employee_who_is_reporting=TableQuery[Employees]
@@ -155,7 +155,7 @@ object DBUtils {
   def getManagerByDepartment(deptName: String, deptId: String): List[models.EmployeeModel] = {
 
 
-    Database.forURL("jdbc:mysql://172.27.59.148:3306/play", "root", "admin", driver = "com.mysql.jdbc.Driver") withSession {
+    Database.forURL("jdbc:mysql://localhost:3306/play", "root", "root", driver = "com.mysql.jdbc.Driver") withSession {
       implicit session =>
 
         val managers = TableQuery[Managers]
@@ -175,7 +175,7 @@ object DBUtils {
  /* def getEmployeeById(empName: String, empId: String): List[models.EmployeeModel] = {
 
 
-    Database.forURL("jdbc:mysql://172.27.59.148:3306/play", "root", "admin", driver = "com.mysql.jdbc.Driver") withSession {
+    Database.forURL("jdbc:mysql://localhost:3306/play", "root", "root", driver = "com.mysql.jdbc.Driver") withSession {
       implicit session =>
 
         val dept = TableQuery[Departments]
@@ -189,7 +189,7 @@ object DBUtils {
   
   def getEmployeeDetails(empId: String, deptId:String): List[models.EmployeeModel] = {
 
-    Database.forURL("jdbc:mysql://172.27.59.148:3306/play", "root", "admin", driver = "com.mysql.jdbc.Driver") withSession {
+    Database.forURL("jdbc:mysql://localhost:3306/play", "root", "root", driver = "com.mysql.jdbc.Driver") withSession {
       implicit session =>
         
         println("empId:"+empId+", length:"+empId.length())
