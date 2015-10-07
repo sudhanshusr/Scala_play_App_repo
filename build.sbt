@@ -28,3 +28,7 @@ coverageEnabled := true
 import de.johoop.cpd4sbt.CopyPasteDetector._
 
 cpdSettings
+
+import de.johoop.findbugs4sbt.FindBugs._
+
+findbugsSettings
