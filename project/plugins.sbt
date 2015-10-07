@@ -28,3 +28,4 @@ addSbtPlugin("org.scalastyle" %% "scalastyle-sbt-plugin" % "0.7.0")
 //For CPD
 addSbtPlugin("de.johoop" % "cpd4sbt" % "1.1.5")
 
+addSbtPlugin("de.johoop" % "findbugs4sbt" % "1.4.0")
