@@ -24,7 +24,7 @@ play.Project.playScalaSettings
 //Added for scoverage
 coverageEnabled := true
 
-//Added for CPD
+//Added for CPD added
 import de.johoop.cpd4sbt.CopyPasteDetector._
 
 cpdSettings
